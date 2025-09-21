@@ -1,5 +1,6 @@
 package models.transaction;
 
+import enums.TxnEnums;
 import jakarta.persistence.*;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,8 @@ public class Transaction {
     private Long id;
 
     private String fromLocation;
+    private TxnEnums.stakeHolders fromLocationType;
+    private TxnEnums.stakeHolders toLocationType;
     private String toLocation;
     private String status;
 }

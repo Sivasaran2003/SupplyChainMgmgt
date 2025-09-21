@@ -14,6 +14,12 @@ public class WarehouseBatch {
 
     @ManyToOne
     @MapsId("batchId")
-    Batch batchId;
+    Batch batch;
+
+    public WarehouseBatch(Warehouse warehouse, Batch batch) {
+        this.warehouse = warehouse;
+        this.batch = batch;
+        this.id = new WarehouseBatchId(batch.getId(), warehouse.getId());
+    }
 }
 

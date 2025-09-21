@@ -1,17 +1,19 @@
 package models.product;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.ManyToOne;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
 import models.supplier.Supplier;
-import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 
 @Entity
 @Data
+@Embeddable
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 public class Batch {
     @Id
     @GeneratedValue
@@ -28,4 +30,8 @@ public class Batch {
     private LocalDate expiryDate;
     @Column(nullable = false)
     private Integer qtyTotal;
+
+    public Batch(Supplier supplier) {
+        this.supplier = supplier;
+    }
 }
