@@ -62,3 +62,6 @@ Transaction :
 This represents moving batches from location A to B
 Created / updated by supply chain operator / logistics manager
 Initially from, to location for a transaction is created then singe or multiple batches are added, both Transaction and TransactionBatches tables are updated
+
+
+ER diagram : https://drive.google.com/file/d/1paHGm0GrdFOI1r-ly5II4W_jASIIh7qL/view?usp=drive_link
